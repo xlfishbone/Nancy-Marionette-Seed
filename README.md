@@ -1,2 +1,7 @@
 # Nancy-Marionette-Seed
-A opinionated seed project with a NancyFx backbend and backbone.marionette
+
+##Under Construction
+
+A opinionated seed project with a NancyFx and backbone.marionette
+
+Current setup uses Owin set up to be hosted in IIS with MSOwin cookie authentication
