@@ -90,6 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\nancy-logo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="gulpfile.js" />
     <Content Include="icon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -107,6 +109,10 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="prebuild.bat" />
+    <Content Include=".bowerrc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

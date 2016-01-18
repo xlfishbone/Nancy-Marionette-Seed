@@ -18,6 +18,13 @@ namespace NancyBackboneSeed.Modules
 
                 return "You got in";
             };
+
+            Get["/Index/error"] = p =>
+            {
+                throw new System.Exception("I'm an error");
+
+                return "this is an error";
+            };
         }
     }
 }
