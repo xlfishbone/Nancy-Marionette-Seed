@@ -15,11 +15,12 @@ namespace NancyBackboneSeed
         {
             base.ConfigureApplicationContainer(container);
 
+            //fill in any manual dependencies here.
             
         }
 
         /// <summary>
-        /// request level depencies
+        /// request level dependencies
         /// </summary>
         /// <param name="container"></param>
         /// <param name="context"></param>
