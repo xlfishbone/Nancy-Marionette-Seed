@@ -16,5 +16,7 @@
 <body>
 	<img src="@Path['~/Images/nancy-logo.png']" alt="Nancy logo" /><br />
 	This view was rendered using the SuperSimpleViewEngine
+	
+	<script src="../_dist/Scripts/bundle.js"></script>
 </body>
 </html>

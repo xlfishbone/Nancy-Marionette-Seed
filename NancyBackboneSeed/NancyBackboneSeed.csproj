@@ -93,7 +93,13 @@
     <Content Include="favicon.ico" />
     <Content Include="gulpfile.js" />
     <Content Include="icon.png" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\layout\masterView.js" />
+    <Content Include="Scripts\app\router.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\shim\BaseView.js" />
+    <Content Include="Scripts\shim\marionette-radio.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,11 +128,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\app\" />
     <Folder Include="Scripts\test\" />
     <Folder Include="Scripts\vendor\" />
     <Folder Include="Styles\" />
     <Folder Include="Templates\" />
+    <Folder Include="_dist\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -144,7 +150,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1144</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1144/</IISUrl>
+          <IISUrl>http://localhost:1145/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

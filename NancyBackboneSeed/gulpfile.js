@@ -22,7 +22,7 @@ var gulpif = require('gulp-if');                // use if in pipe
 
 
 var config = {
-    isProduction: true,
+    isProduction: process.env.NODE_ENV != "Debug",
     buildConfiguration: process.env.NODE_ENV
 };
 
@@ -71,8 +71,8 @@ function runBrowswerify(file, opts, mode) {
 
     _.assign(opts, {
         entries: [file],
-        debug: true//!config.isProduction
-
+        debug: true, //!config.isProduction
+        fullpaths: false
     });
 
     var bundler;
@@ -106,8 +106,8 @@ function runBrowswerify(file, opts, mode) {
           .pipe(buffer())
           .pipe(sourcemaps.init({ loadMaps: true })) // loads map from browserify file
           .pipe(gulpif(config.isProduction, uglify())).on('error', gutil.log)
-          .pipe(sourcemaps.write('./')) // writes .map file in the same directory as js
-          .pipe(gulp.dest('./Scripts/_dist'));
+          .pipe(sourcemaps.write('./', { includeContent: false, sourceRoot: '/' })) // writes .map file in the same directory as js
+          .pipe(gulp.dest('./_dist/Scripts'));
     }
 
 
@@ -123,7 +123,7 @@ gulp.task('bower', function () {
 
 //clean up _dist folder
 gulp.task('cleanjs', function (cb) {
-    return del(['./Scripts/_dist/*'], cb);
+    return del(['./_dist/scripts/*'], cb);
 });
 
 gulp.task('js', ['cleanjs'], function () {
